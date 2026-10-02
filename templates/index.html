@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureFile</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="logo">🔐</div>
+
+            <div>
+                <h1>SecureFile</h1>
+                <p>File Encryption & Decryption System</p>
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <h2>Secure Your Files</h2>
+
+            <p class="description">
+                Encrypt your files with a secret key and decrypt them whenever you need.
+            </p>
+
+
+            <form action="/encrypt" method="POST" enctype="multipart/form-data">
+
+                <label>Select File</label>
+
+                <div class="file-box">
+                    <input type="file" name="file" required>
+                </div>
+
+
+                <label>Secret Key</label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your secret key"
+                    required
+                >
+
+
+                <button type="submit" class="encrypt-btn">
+                    🔒 Encrypt File
+                </button>
+
+            </form>
+
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+
+            <form action="/decrypt" method="POST" enctype="multipart/form-data">
+
+                <label>Select Encrypted File</label>
+
+                <div class="file-box">
+                    <input type="file" name="file" required>
+                </div>
+
+
+                <label>Secret Key</label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter the same secret key"
+                    required
+                >
+
+
+                <button type="submit" class="decrypt-btn">
+                    🔓 Decrypt File
+                </button>
+
+            </form>
+
+
+            {% if message %}
+                <div class="message {{ message_type }}">
+                    {{ message }}
+                </div>
+            {% endif %}
+
+        </div>
+
+
+        <div class="info">
+
+            <div>
+                <span>🔒</span>
+                <p><strong>Secure</strong><br>Encrypted files</p>
+            </div>
+
+            <div>
+                <span>🔑</span>
+                <p><strong>Private Key</strong><br>Your secret key</p>
+            </div>
+
+            <div>
+                <span>📁</span>
+                <p><strong>Any File</strong><br>Supports file types</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    background: #2563eb;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #111827;
+}
+
+.header p {
+    margin-top: 4px;
+    color: #6b7280;
+}
+
+
+/* Main Card */
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #6b7280;
+    margin-bottom: 28px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+
+/* File Input */
+
+.file-box {
+    border: 2px dashed #cbd5e1;
+    padding: 18px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+input[type="file"] {
+    width: 100%;
+}
+
+
+/* Password */
+
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+input[type="password"]:focus {
+    border-color: #2563eb;
+}
+
+
+/* Buttons */
+
+button {
+    width: 100%;
+    border: none;
+    padding: 14px;
+
+    margin-top: 22px;
+
+    border-radius: 9px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.encrypt-btn {
+    background: #2563eb;
+}
+
+.encrypt-btn:hover {
+    background: #1d4ed8;
+}
+
+.decrypt-btn {
+    background: #16a34a;
+}
+
+.decrypt-btn:hover {
+    background: #15803d;
+}
+
+
+/* Divider */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin: 30px 0;
+
+    color: #94a3b8;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    background: #e2e8f0;
+    flex: 1;
+}
+
+
+/* Message */
+
+.message {
+    margin-top: 25px;
+    padding: 14px;
+
+    border-radius: 9px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* Bottom Info */
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.info div {
+    background: white;
+
+    flex: 1;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info span {
+    font-size: 22px;
+}
+
+.info p {
+    margin-top: 7px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 25px;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+}
